@@ -25,7 +25,6 @@ def main(cfg):
     cleaner = Cleaner()
     df_test['text_cleaned'] = df_test[inference_conf['text_column']].apply(cleaner.clean)
     
-    df_test = df_test.sample(20)
 
     samples = df_test['text_cleaned'].tolist()
 
