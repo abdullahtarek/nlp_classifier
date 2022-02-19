@@ -11,7 +11,7 @@ This project trains a bert model on detecting the author from a piece of text. A
 - `$ git https://git.toptal.com/screening/Abdullah-Tarek.git`
 - `$ cd Abdullah-Tarek`
 - Move the train.csv and test.csv in the `data` folder
-- Download the trained model from [here](https://drive.google.com/file/d/1__ibAePcdGJUBRo84qFWXpep_rpQd738/view?usp=sharing), unzip it and move it in the `saved_models` fodler.
+- Download the trained model from [here](https://drive.google.com/file/d/1__ibAePcdGJUBRo84qFWXpep_rpQd738/view?usp=sharing), unzip it and move it in the `saved_models` folder.
 
 ### Python
 - `$ pip install -r requirements.txt`
