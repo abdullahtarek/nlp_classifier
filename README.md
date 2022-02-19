@@ -3,7 +3,8 @@
 This project trains a bert model on detecting the author from a piece of text. And uses the model in make predictions on new data using `batch_inference.py`.
 
 ## Results.csv
-You can find the results.csv in the `data` folder with the required format
+* You can find the results.csv in the `data` folder with the required format
+* You can find the eda notebook in the `notebooks` folder 
 
 ## Installation
 ### Set up
