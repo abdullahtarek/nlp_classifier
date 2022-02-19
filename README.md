@@ -24,4 +24,5 @@ You can find the results.csv in the `data` folder with the required format
 ## Extra options
 ### Manging Configurations
 * All configurations are in the conf folder where you can change the data path, model path, etc. 
-* You can also provide the configuration flag while running the script. You can write --help after the python command to see which configs you can change. Example: `python3 batch_inference.py --help`. * Also please notice the paths you write will be relative to the `Abdullah-Tarek/outputs` folder. You can write the full path if that will help.
+* You can also provide the configuration flag while running the script. You can write --help after the python command to see which configs you can change. Example: `python3 batch_inference.py --help`.       
+* Also please notice the paths you write will be relative to the `Abdullah-Tarek/outputs` folder. You can write the full path if that will help.
