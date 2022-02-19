@@ -1,0 +1,4 @@
+inference_conf:
+  output_file_path: ../../../saved_models/final_model
+  label_map_path: ../../../saved_models/label_map.pickle
+  input_file_path: ../../../data/test.csv

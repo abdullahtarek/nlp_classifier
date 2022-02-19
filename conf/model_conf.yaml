@@ -1,0 +1,4 @@
+model_conf:
+  batch_size: 4
+  model_name: 'bert-base-uncased'
+  max_len: 256

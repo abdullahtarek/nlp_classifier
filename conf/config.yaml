@@ -1,0 +1,6 @@
+defaults:
+  - _self_
+  - model_conf
+  - inference_conf
+  - training_conf
+  

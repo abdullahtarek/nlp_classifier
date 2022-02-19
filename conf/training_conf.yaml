@@ -1,0 +1,10 @@
+training_conf:
+  training_output_dir: ../../../saved_models/
+  dataset_path: ../../../data/train.csv
+  text_column: text
+  label_column: author
+  test_size: 0.2
+  batch_size: 4
+  epochs: 2
+  learning_rate: 1e-4
+  save_steps: 3999
