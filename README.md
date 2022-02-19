@@ -1,6 +1,6 @@
 # Author Classifier
 ## Introduction
-This project trains a bert model on detecting the author from a piece of text. And uses the model in make predictions on new data usinf `batch_inference.py`.
+This project trains a bert model on detecting the author from a piece of text. And uses the model in make predictions on new data using `batch_inference.py`.
 
 ## Results.csv
 You can find the results.csv in the `data` folder with the required format
