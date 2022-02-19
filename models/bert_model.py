@@ -6,15 +6,20 @@ from transformers.trainer_utils import EvaluationStrategy
 from transformers.data.processors.utils import InputFeatures
 from sklearn.metrics import classification_report, accuracy_score, f1_score, confusion_matrix, precision_score , recall_score
 import os
+from tqdm import tqdm
 
 
 class BertModel():
-    def __init__(self,model_conf,num_labels):
+    def __init__(self,model_conf,num_labels,inference_flag=False):
         self.model_conf = model_conf
-        self.model = self.make_model(self.model_conf['model_name'],num_labels)
+        if inference_flag:
+            self.model = self.make_model(self.model_conf['model_path'],num_labels)
+        else:
+            self.model = self.make_model(self.model_conf['model_name'],num_labels)
+            
         
-    def make_model(self,model_name,num_labels):
-        return AutoModelForSequenceClassification.from_pretrained(model_name, return_dict=True, num_labels=num_labels)
+    def make_model(self,model_name_or_path,num_labels):
+        return AutoModelForSequenceClassification.from_pretrained(model_name_or_path, return_dict=True, num_labels=num_labels)
 
     def get_training_arguments(self,training_len,train_conf):
         checkpoint_dir = os.path.join(train_conf.get('training_output_dir'),"checkpoints")
@@ -63,6 +68,22 @@ class BertModel():
 
         pass
 
-    def predict():
+    def predict(self,samples, inference_conf,tokenizer,label_encoder):
 
-        pass
+        batch_size = inference_conf['batch_size']
+        preds = []
+        for index in tqdm(range(0,len(samples),batch_size)):
+            samples_batch = samples[index:index+batch_size]
+            # Tokenize text
+            inputs = tokenizer(samples_batch,return_tensors='pt',truncation=True,padding='max_length',max_length=256)
+            # Forward propigation
+            output = self.model.forward(**inputs)
+            output_numpy = output.logits.detach().numpy()
+            output_list = np.argmax(output_numpy,axis=1).tolist()
+            
+            preds+=output_list
+
+        if label_encoder is not None:
+            preds = label_encoder.inverse_transform(preds)
+
+        return preds

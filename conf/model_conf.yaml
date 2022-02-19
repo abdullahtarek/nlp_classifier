@@ -1,4 +1,5 @@
 model_conf:
   batch_size: 4
   model_name: 'bert-base-uncased'
+  model_path: ../../../saved_models/final_model
   max_len: 256
