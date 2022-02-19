@@ -14,9 +14,6 @@ def main(cfg):
 
     training_conf = cfg['training_conf']
     model_conf = cfg['model_conf']
-
-    print(training_conf)
-    print(model_conf)
     
     # Read dataset
     dataset_df = pd.read_csv(training_conf['dataset_path'])
