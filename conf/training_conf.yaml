@@ -1,8 +1,8 @@
 training_conf:
   training_output_dir: ../../../saved_models/
   dataset_path:  ../../../data/train.csv
-  text_column: text
-  label_column: author
+  text_column: 
+  label_column: 
   test_size: 0.2
   batch_size: 4
   epochs: 2

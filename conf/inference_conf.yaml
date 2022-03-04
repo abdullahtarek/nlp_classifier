@@ -2,6 +2,6 @@ inference_conf:
   label_map_path: ../../../saved_models/label_map.pickle
   input_file_path: ../../../data/test.csv
   output_file_path: ../../../data/results.csv
-  output_column_name: author
-  text_column: text
+  output_column_name: 
+  text_column: 
   batch_size: 4
