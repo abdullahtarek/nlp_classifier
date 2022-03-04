@@ -7,7 +7,6 @@ This project trains a bert model on any NLP classifcation model. And uses the mo
 - `$ https://github.com/abdullahtarek/nlp_classifier.git`
 - `$ cd nlp_classifier.git`
 - Move the train.csv and test.csv in the `data` folder
-- Download the trained model from [here](https://drive.google.com/file/d/1__ibAePcdGJUBRo84qFWXpep_rpQd738/view?usp=sharing), unzip it and move it in the `saved_models` folder.
 
 ### Python
 - `$ pip install -r requirements.txt`
