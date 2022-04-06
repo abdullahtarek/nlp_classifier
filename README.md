@@ -1,6 +1,6 @@
 # NLP Classifier
 ## Introduction
-This project trains a bert model on any NLP classifcation model. And uses the model in make predictions on new data using `batch_inference.py`. This architecture can be easily extended to cover a lot more models.
+This project trains a bert model on any NLP classifcation model. And uses the model in make predictions on new data using `batch_inference.py`. This architecture can be easily extended to cover a lot more models
 
 ## Installation
 ### Set up
